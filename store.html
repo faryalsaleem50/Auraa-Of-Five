@@ -1,0 +1,301 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Store</title>
+ <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+
+</head>
+<body class="second-page-background">
+
+<div class="store">
+
+        <!-- ================= Back Button ================= -->
+    <div class="back-btn">
+        <a href="./index.html">
+            <i style="color: white;" class="fa-solid fa-arrow-left"></i>
+        </a>
+    </div>
+
+<!-- ================= Left Panel ================= -->
+<div class="left">
+    <div class="player-frame">
+        <div class="player-circle"></div>
+    </div>
+    <p class="label">Player Name</p>
+    <div class="player-name">PLAYER 1</div>
+    <button class="edit-btn">Edit</button>
+</div>
+
+<!-- ================= Right Panel ================= -->
+<div class="right">
+
+    <!-- ================= Player Radio Buttons ================= -->
+    <div class="players-row">
+
+        <input type="radio" name="player" id="p1" checked>
+        <label class="p-tab p1 hoverable" for="p1">1P</label>
+
+        <input type="radio" name="player" id="p2">
+        <label class="p-tab p2 hoverable" for="p2">2P</label>
+
+        <input type="radio" name="player" id="p3">
+        <label class="p-tab p3 hoverable" for="p3">3P</label>
+
+        <input type="radio" name="player" id="p4">
+        <label class="p-tab p4 hoverable" for="p4">4P</label>
+
+        <!-- ================= Coins ================= -->
+        <div class="coins-box">
+            <span>109</span>
+            <div class="coin-area">
+                <img src="./Images/coin image.png" class="coin">
+                <div class="plus-box"><i class="fa-solid fa-plus"></i></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ================= Tab Radio Buttons ================= -->
+    <input type="radio" id="show-colors" name="tabs" checked hidden>
+    <input type="radio" id="show-cars" name="tabs" hidden>
+    <input type="radio" id="show-hats" name="tabs" hidden>
+ 
+
+    <!-- ================= Category Tabs ================= -->
+    <div class="cat-row">
+
+        <label for="show-colors" class="game-tab">
+        <img src="./Images/color.png">
+        <span>COLOR</span>
+       </label>
+
+       <label for="show-cars" class="game-tab">
+        <img src="./Images/Car Images/car.png">
+        <span>CAR</span>
+      </label>
+
+      <label for="show-hats" class="game-tab">
+        <img src="./Images/Hat Images/hat 10.png">
+        <span>HATS</span>
+      </label>
+
+    </div>
+
+    <!-- ================= Scroll Box ================= -->
+    <div class="scroll-container">
+        <div class="rows-wrapper">
+
+            <!-- ================= Colors Section ================= -->
+            <div class="colors-section">
+
+        <!-- ================= Row 1 ================= -->
+        <div class="colors-row">
+
+            <!-- ================= Free Colors ================= -->
+            <div class="box red hoverable"><div class="color-tick"><i style="color: green;" class="fa-solid fa-check"></i></div></div>
+            <div class="box sky hoverable"></div>
+            <div class="box green hoverable"></div>
+            <div class="box yellow hoverable"></div>
+
+            <!-- ================= Paid Colors ================= -->
+            <div class="box purple hoverable"><div class="color-price"><img src="./Images/coin image.png"> 500</div></div>
+            <div class="box pink hoverable"><div class="color-price"><img src="./Images/coin image.png"> 500</div></div>
+            <div class="box teal hoverable"><div class="color-price"><img src="./Images/coin image.png"> 1000</div></div>
+            <div class="box cyan hoverable"><div class="color-price"><img src="./Images/coin image.png"> 1000</div></div>
+            <div class="box orange hoverable"><div class="color-price"><img src="./Images/coin image.png"> 1000</div></div>
+            <div class="box black hoverable"><div class="color-price"><img src="./Images/coin image.png"> 3000</div></div>
+            <div class="box grey hoverable"><div class="color-price"><img src="./Images/coin image.png"> 3000</div></div>
+            <div class="box brown hoverable"><div class="color-price"><img src="./Images/coin image.png"> 5000</div></div>
+            <div class="box blue hoverable"><div class="color-price"><img src="./Images/coin image.png"> 5000</div></div>
+            <div class="box lime hoverable"><div class="color-price"><img src="./Images/coin image.png"> 7000</div></div>
+            <div class="box maroon hoverable"><div class="color-price"><img src="./Images/coin image.png"> 7000</div></div>
+            <div class="box gold hoverable"><div class="color-price"><img src="./Images/coin image.png"> 7000</div></div>
+            <div class="box olive hoverable"><div class="color-price"><img src="./Images/coin image.png"> 7000</div></div>
+            <div class="box sapphire hoverable"><div class="color-price"><img src="./Images/coin image.png"> 7000</div></div>
+            <div class="box magenta hoverable"><div class="color-price"><img src="./Images/coin image.png"> 7000</div></div>
+            <div class="box coral hoverable"><div class="color-price"><img src="./Images/coin image.png"> 10000</div></div>
+            <div class="box navy hoverable"><div class="color-price"><img src="./Images/coin image.png"> 10000</div></div>
+            <div class="box peach hoverable"><div class="color-price"><img src="./Images/coin image.png"> 10000</div></div>
+            <div class="box mint hoverable"><div class="color-price"><img src="./Images/coin image.png"> 10000</div></div>
+
+        </div>
+
+        <!-- ================= Row 2 ================= -->
+        <div class="colors-row">
+            <div class="box gradient1 hoverable"><div class="color-price"><img src="./Images/coin image.png"> 15000</div></div>
+            <div class="box gradient2 hoverable"><div class="color-price"><img src="./Images/coin image.png"> 15000</div></div>
+            <div class="box gradient3 hoverable"><div class="color-price"><img src="./Images/coin image.png"> 25000</div></div>
+            <div class="box gradient4 hoverable"><div class="color-price"><img src="./Images/coin image.png"> 25000</div></div>
+            <div class="box gradient5 hoverable"><div class="color-price"><img src="./Images/coin image.png"> 25000</div></div>
+            <div class="box gradient6 hoverable"><div class="color-price"><img src="./Images/coin image.png"> 25000</div></div>
+            <div class="box gradient7 hoverable"><div class="color-price"><img src="./Images/coin image.png"> 35000</div></div>
+            <div class="box rainbow hoverable"><div class="color-price"><img src="./Images/coin image.png"> 30000</div></div>
+            <div class="box pattern1 hoverable"><div class="color-price"><img src="./Images/coin image.png"> 30000</div></div>
+            <div class="box pattern2 hoverable"><div class="color-price"><img src="./Images/coin image.png"> 30000</div></div>
+            <div class="box pattern3 hoverable"><div class="color-price"><img src="./Images/coin image.png"> 30000</div></div>
+            <div class="box pattern4 hoverable"><div class="color-price"><img src="./Images/coin image.png"> 35000</div></div>
+            <div class="box pattern5 hoverable"><div class="color-price"><img src="./Images/coin image.png"> 35000</div></div>
+            <div class="box mix1 hoverable"><div class="color-price"><img src="./Images/coin image.png"> 35000</div></div>
+            <div class="box mix2 hoverable"><div class="color-price"><img src="./Images/coin image.png"> 50000</div></div>
+            <div class="box mix3 hoverable"><div class="color-price"><img src="./Images/coin image.png"> 50000</div></div>
+            <div class="box mix4 hoverable"><div class="color-price"><img src="./Images/coin image.png"> 50000</div></div>
+            <div class="box mix5 hoverable"><div class="color-price"><img src="./Images/coin image.png"> 50000</div></div>
+            <div class="box mix6 hoverable"><div class="color-price"><img src="./Images/coin image.png"> 35000</div></div>
+           
+            <div class="box special1 hoverable"><div class="color-price"><img src="./Images/coin image.png"> 100000</div></div>
+            <div class="box special2 hoverable"><div class="color-price"><img src="./Images/coin image.png"> 100000</div></div>
+            <div class="box special3 hoverable"><div class="color-price"><img src="./Images/coin image.png"> 100000</div></div>
+            <div class="box special4 hoverable"><div class="color-price"><img src="./Images/coin image.png"> 35000</div></div>
+
+        </div>
+
+            </div>
+
+            <!-- ================= Cars Section ================= -->
+            <div class="cars-section">
+
+                <div class="colors-row-cars">
+
+                    <div class="car-box hoverable" style="background-color: lightslategray;"><img src="./Images/Car Images/car 1.png"><div class="tick"><i style="color: green;" class="fa-solid fa-check"></i></div></div>
+                    <div class="car-box hoverable premium" style="background-color: greenyellow;"><img src="./Images/Car Images/car 2.png"><div class="car-price"><img src="./Images/coin image.png">500</div></div>
+                    <div class="car-box hoverable premium" style="background-color: greenyellow;"><img src="./Images/Car Images/car 3.png"><div class="car-price"><img src="./Images/coin image.png">1000</div></div>
+                    <div class="car-box hoverable premium" style="background-color: greenyellow;"><img src="./Images/Car Images/car 4.png"><div class="car-price"><img src="./Images/coin image.png">2000</div></div>
+                    <div class="car-box hoverable premium" style="background-color: lightseagreen;"><img src="./Images/Car Images/car 5.png"><div class="car-price"><img src="./Images/coin image.png">3000</div></div>
+                    <div class="car-box hoverable premium" style="background-color: lightseagreen;"><img src="./Images/Car Images/car 6.png"><div class="car-price"><img src="./Images/coin image.png">5000</div></div>
+                    <div class="car-box hoverable premium" style="background-color: lightseagreen;"><img src="./Images/Car Images/car 7.png"><div class="car-price"><img src="./Images/coin image.png">10000</div></div>
+                    <div class="car-box hoverable premium" style="background-color: red;"><img src="./Images/Car Images/car 8.png"><div class="car-price"><img src="./Images/coin image.png">12000</div></div>
+                    <div class="car-box hoverable premium" style="background-color: red;"><img src="./Images/Car Images/car 9.png"><div class="car-price"><img src="./Images/coin image.png">15000</div></div>
+                    <div class="car-box hoverable premium" style="background-color: red;"><img src="./Images/Car Images/car 10.png"><div class="car-price"><img src="./Images/coin image.png">20000</div></div>
+                    <div class="car-box hoverable premium" style="background-color: orange;"><img src="./Images/Car Images/car 11.png"><div class="car-price"><img src="./Images/coin image.png">25000</div></div>
+                    <div class="car-box hoverable premium" style="background-color: orange;"><img src="./Images/Car Images/car 12.png"><div class="car-price"><img src="./Images/coin image.png">15000</div></div>
+                    <div class="car-box hoverable premium" style="background-color: orange;"><img src="./Images/Car Images/car 13.png"><div class="car-price"><img src="./Images/coin image.png">23000</div></div>
+                    <div class="car-box hoverable premium" style="background-color: green;"><img src="./Images/Car Images/car 14.png"><div class="car-price"><img src="./Images/coin image.png">30000</div></div>
+                    <div class="car-box hoverable premium" style="background-color: green;"><img src="./Images/Car Images/car 15.png"><div class="car-price"><img src="./Images/coin image.png">20000</div></div>
+                    <div class="car-box hoverable premium" style="background-color: green;"><img src="./Images/Car Images/car 16.png"><div class="car-price"><img src="./Images/coin image.png">15000</div></div>
+                    <div class="car-box hoverable premium" style="background-color: purple;"><img src="./Images/Car Images/car 17.png"><div class="car-price"><img src="./Images/coin image.png">20000</div></div>
+                    <div class="car-box hoverable premium" style="background-color: purple;"><img src="./Images/Car Images/car 18.png"><div class="car-price"><img src="./Images/coin image.png">30000</div></div>
+                    <div class="car-box hoverable premium" style="background-color: purple;"><img src="./Images/Car Images/car 19.png"><div class="car-price"><img src="./Images/coin image.png">30000</div></div>
+                    <div class="car-box hoverable premium" style="background-color: blue;"><img src="./Images/Car Images/car 20.png"><div class="car-price"><img src="./Images/coin image.png">13000</div></div>
+                    <div class="car-box hoverable premium" style="background-color: blue;"><img src="./Images/Car Images/car 21.png"><div class="car-price"><img src="./Images/coin image.png">30000</div></div>
+                </div>
+
+            </div>
+
+
+
+
+            <!-- ================= Hats Section ================= -->
+<div class="hats-section">
+    <div class="colors-row-hats">
+
+        <div class="hat-box hoverable" style="background-color: lightslategray;">
+            <img src="./Images/Hat Images/hat 1.png">
+            <div class="tick"><i class="fa-solid fa-check"></i></div>
+            <div class="selected-badge">SELECTED</div>
+        </div>
+
+        <div class="hat-box hoverable premium" style="background-color: lightseagreen;">
+            <img src="./Images/Hat Images/hat 2.png">
+            <div class="hat-price"><img src="./Images/coin image.png">500</div>
+        </div>
+
+        <div class="hat-box hoverable premium" style="background-color: lightseagreen;">
+            <img src="./Images/Hat Images/hat 3.png">
+            <div class="hat-price"><img src="./Images/coin image.png">1000</div>
+        </div>
+
+        <div class="hat-box hoverable premium" style="background-color: lightseagreen;">
+            <img src="./Images/Hat Images/hat 4.png">
+            <div class="hat-price"><img src="./Images/coin image.png">2000</div>
+        </div>
+
+        <div class="hat-box hoverable premium" style="background-color: orange;">
+            <img src="./Images/Hat Images/hat 5.png">
+            <div class="hat-price"><img src="./Images/coin image.png">3000</div>
+        </div>
+
+        <div class="hat-box hoverable premium" style="background-color: orange;">
+            <img src="./Images/Hat Images/hat 6.png">
+            <div class="hat-price"><img src="./Images/coin image.png">5000</div>
+        </div>
+
+        <div class="hat-box hoverable premium" style="background-color: orange;">
+            <img src="./Images/Hat Images/hat 7.png">
+            <div class="hat-price"><img src="./Images/coin image.png">10000</div>
+        </div>
+
+        <div class="hat-box hoverable premium" style="background-color: green;">
+            <img src="./Images/Hat Images/hat 8.png">
+            <div class="hat-price"><img src="./Images/coin image.png">12000</div>
+        </div>
+
+        <div class="hat-box hoverable premium" style="background-color: green;">
+            <img src="./Images/Hat Images/hat 9.png">
+            <div class="hat-price"><img src="./Images/coin image.png">15000</div>
+        </div>
+
+        <div class="hat-box hoverable premium" style="background-color: green;">
+            <img src="./Images/Hat Images/hat 10.png">
+            <div class="hat-price"><img src="./Images/coin image.png">20000</div>
+        </div>
+
+        <div class="hat-box hoverable premium" style="background-color: purple;">
+            <img src="./Images/Hat Images/hat 11.png">
+            <div class="hat-price"><img src="./Images/coin image.png">25000</div>
+        </div>
+
+        <div class="hat-box hoverable premium" style="background-color: purple;">
+            <img src="./Images/Hat Images/hat 12.png">
+            <div class="hat-price"><img src="./Images/coin image.png">15000</div>
+        </div>
+
+        <div class="hat-box hoverable premium" style="background-color: purple;">
+            <img src="./Images/Hat Images/hat 13.png">
+            <div class="hat-price"><img src="./Images/coin image.png">23000</div>
+        </div>
+
+        <div class="hat-box hoverable premium" style="background-color: lightsalmon;">
+            <img src="./Images/Hat Images/hat 14.png">
+            <div class="hat-price"><img src="./Images/coin image.png">30000</div>
+        </div>
+
+        <div class="hat-box hoverable premium" style="background-color: lightsalmon;">
+            <img src="./Images/Hat Images/hat 15.png">
+            <div class="hat-price"><img src="./Images/coin image.png">20000</div>
+        </div>
+
+        <div class="hat-box hoverable premium" style="background-color: lightsalmon;">
+            <img src="./Images/Hat Images/hat 16.png">
+            <div class="hat-price"><img src="./Images/coin image.png">15000</div>
+        </div>
+
+        <div class="hat-box hoverable premium" style="background-color: red;">
+            <img src="./Images/Hat Images/hat 17.png">
+            <div class="hat-price"><img src="./Images/coin image.png">12000</div>
+        </div>
+
+
+        <div class="hat-box hoverable premium" style="background-color: red;">
+            <img src="./Images/Hat Images/hat 18.png">
+            <div class="hat-price"><img src="./Images/coin image.png">17000</div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+</body>
+</html>

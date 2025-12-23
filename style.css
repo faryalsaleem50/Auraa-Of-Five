@@ -1,0 +1,945 @@
+/* ================= General Body ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.second-page-background {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("quick game.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Fredoka One", cursive;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-x: hidden;
+    overflow-y: hidden; 
+}
+
+/* ================= Back Button ================= */
+.back-btn {
+    position: fixed;
+    top: 35px;
+    left: 30px;
+    font-size: 48px;
+    color: white;
+    z-index: 9999;
+}
+
+.back-btn a {
+    display: block;
+}
+
+/* ================= Store Page ================= */
+.store {
+    position: relative;
+    display: flex;
+    gap: 20px;
+
+    width: 92%;
+    max-width: 1400px;
+    padding: 40px 40px 20px;
+}
+
+.hoverable:hover {
+    transform: scale(1.06);
+    transition: 0.15s;
+    cursor: pointer;
+}
+
+/* ================= Left ================= */
+
+.left {
+    width: 50%;
+    text-align: center;
+    color: red;
+    margin-top: 220px;
+    margin-right: 60px;
+    position: relative;
+}
+
+.player-frame {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 18px solid gold;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-circle {
+    width: 150px;
+    height: 150px;
+    background: red;
+    border-radius: 50%;
+    border: 6px solid orange;
+}
+
+.label {
+    font-size: 28px;
+    margin-top: 20px;   
+}
+
+.player-name {
+    background: yellow;
+    width: 70%;
+    margin: 10px auto;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 26px;
+}
+
+.edit-btn {
+    margin-top: 20px;
+    padding: 12px 46px;
+    font-size: 24px;
+    font-weight: 700;
+    background: yellow;
+    border: none;
+    border-radius: 14px;
+    color: red;
+}
+
+/* ================= Right ================= */
+.right {
+    width: 70%;
+    margin-top: 0;
+}
+
+.players-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+    width: 100%;
+}
+
+.players-left {
+    display: flex;
+    gap: 25px;
+}
+
+.players-row input[type="radio"] {
+    display: none;
+}
+
+.p-tab {
+    padding: 10px 28px;
+    font-size: 30px;
+    border-radius: 14px;
+    border: 4px solid black;
+    transition: 0.2s;   
+}
+
+.p1 { background: #ff3b30; color: white; }
+.p2 { background: #00a5ff; color: white; }
+.p3 { background: #00d42b; color: white; }
+.p4 { background: #ffd500; color: white; }
+
+#p1:checked + .p1,
+#p2:checked + .p2,
+#p3:checked + .p3,
+#p4:checked + .p4 {
+    border: 4px solid white;
+    box-shadow: 5px 5px 10px black inset;
+    transform: scale(1.08);
+}
+
+/* ================= Coin Box ================= */
+.coins-box {
+    background: #3a256d; 
+    padding: 6px 14px;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    width: fit-content;
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    gap: 6px;
+    transform: skew(-10deg); 
+    margin-left: auto;  
+}
+
+.coins-box span {
+    transform: skew(10deg);    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coin-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    transform: skew(10deg);   
+}
+
+.coin {
+    width: 50px;
+    height: auto;
+    display: block;
+}
+
+.plus-box {
+    width: 18px;
+    height: 18px;
+    background: #00d12d;
+    color: black;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 900;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+}
+
+
+
+ /* ================= Tabs ================= */
+ .cat-row {
+    display: flex;
+    gap: 32px;
+    margin-top: 60px;
+    align-items: center;
+}
+
+/* ================= Tab Card ================= */
+.game-tab {
+    width: 160px;
+    height: 55px;
+    background:linear-gradient(90deg,#00ffcc,#0066ff);
+    border-radius: 6px;
+    position: relative;
+    transform: skewX(-15deg);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 65px;
+    cursor: pointer;
+    box-shadow: 0 6px 0 rgba(206, 68, 68, 0.35);
+}
+/* ================= Image ================= */
+.game-tab img {
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%) skewX(15deg);
+    width: 75px;
+}
+
+/* ================= Text ================= */
+.game-tab span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4b2a7a;
+    transform: skewX(15deg);
+}
+
+
+/* ================= Active Tab ================= */
+#show-colors:checked ~ .cat-row label[for="show-colors"],
+#show-cars:checked ~ .cat-row label[for="show-cars"],
+#show-hats:checked ~ .cat-row label[for="show-hats"]
+ {
+    background: white;  
+}
+
+/* ================= Hover ================= */
+.game-tab:hover {
+    transform: skewX(-15deg) scale(1.05);
+}
+
+
+
+.scroll-container {
+    overflow-x: auto;
+    overflow-y: hidden;   
+    margin-top: 60px;     
+}
+
+.colors-row {
+    display: flex;
+    gap: 26px;
+    margin-bottom: 55px;
+}
+.colors-row-cars,
+.colors-row-hats {
+    display: flex;
+    gap: 26px;
+    margin-bottom: 85px;
+}
+
+
+/* ================= Hide All Sections ================= */
+.colors-section,
+.cars-section,
+.hats-section {
+    display: none;
+}
+
+/* ================= Show Sections Based On Tab ================= */
+#show-colors:checked ~ .cat-row #tab-color,
+#show-cars:checked   ~ .cat-row #tab-car,
+#show-hat:checked    ~ .cat-row #tab-hat
+ {
+    background: white;
+    color: black;
+}
+
+/* ================= All Content Show ================= */
+#show-colors:checked ~ .scroll-container .colors-section,
+#show-cars:checked ~ .scroll-container .cars-section,
+#show-hats:checked ~ .scroll-container .hats-section {
+    display: block;
+}
+
+/* ================= Color Section ================= */
+
+/* ================= Color Boxes ================= */
+.box {
+    width: 95px;
+    height: 85px;
+    border-radius: 15px;
+    background: #777;
+    flex-shrink: 0;
+    position: relative;
+}
+
+/* ================= Solid Colors ================= */
+.red{background:#ff0000}
+.sky{background:#00c3ff}
+.green{background:#00d62c}
+.yellow{background:#ffd600}
+.purple{background:#7d00ff}
+.pink{background:#ff3cac}
+.teal { background: #00c2a8; } 
+.cyan { background: #00ffff; }  
+.orange{background:#ff8800}
+.black{background:#000000}
+.grey{background:#999999}
+.brown{background:#7a4a2e}
+.blue{background:#0044ff}
+.lime{background:#66ff00}
+.maroon{background:#800000}
+.gold{background:#ffcc00}
+.olive{background:#808000}
+.sapphire{background:#0f52ba}
+.magenta{background:#ff00ff}
+.coral{background:#ff6f61}
+.navy{background:#001f54}
+.peach{background:#ffb07c}
+.mint{background:#98ff98}
+
+/* ================= Gradient ================= */
+.gradient1{background:linear-gradient(45deg,red,yellow)}
+.gradient2{background:linear-gradient(45deg,blue,cyan)}
+.gradient3{background: linear-gradient(to bottom, green, lime)}
+.gradient4{background:linear-gradient(45deg,pink,purple)}
+.gradient5{background:linear-gradient(45deg,orange,red)}
+.gradient6{background:linear-gradient(45deg,black,grey)}
+.gradient7{background: linear-gradient(135deg, #ff512f, #dd2476)}
+.rainbow{background:linear-gradient(45deg,red,yellow,green,cyan,blue)}
+
+/* ================= Patterns ================= */
+.pattern1{background:repeating-linear-gradient(45deg,#fff,#fff 5px,#000 5px,#000 10px)}
+.pattern2{background:repeating-linear-gradient(0deg,red,red 6px,yellow 6px,yellow 12px)}
+.pattern3{background:radial-gradient(circle,#fff 20%,#000 21%)}
+.pattern4{background:repeating-radial-gradient(circle,red,red 6px,white 6px,white 12px)}
+.pattern5{background: repeating-linear-gradient(135deg,#00ffff,#00ffff 8px,#0044ff 8px,#0044ff 16px)}
+
+/* ================= Mix Colors ================= */
+.mix1{background:linear-gradient(135deg,#ff00cc,#3333ff)}
+.mix2{background:linear-gradient(90deg,#00ffcc,#0066ff)}
+.mix3{background:linear-gradient(135deg,#ffe000,#ff6a00)}
+.mix4{background:linear-gradient(45deg,#0f0c29,#302b63,#24243e)}
+.mix5{background:linear-gradient(45deg,#11998e,#38ef7d)}
+.mix6{background: linear-gradient(120deg, #fc5c7d, #6a82fb)}
+
+/* ================= Special Colors ================= */
+.special1{background: conic-gradient(red,yellow,green,cyan,blue,magenta,red)}
+.special2{background:linear-gradient(45deg,gold,white,gold)}
+.special3{background:repeating-linear-gradient(45deg,#333,#333 5px,#777 5px,#777 10px)}
+.special4{background: conic-gradient(from 0deg,gold 0deg 45deg,#fff2b2 45deg 90deg,gold 90deg 135deg,#fff2b2 135deg 180deg,gold 180deg 225deg,#fff2b2 225deg 270deg,gold 270deg 315deg,#fff2b2 315deg 360deg)}
+
+/* ================= Price Text ================= */
+.color-price {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+
+    background: #3b1f6f;
+    color: #fff;
+    font-size: 12px;
+
+    height: 28px;          
+    min-width: 80px;       
+    padding: 0 8px;
+
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    box-sizing: border-box;
+    z-index: 3;
+}
+
+.car-price,
+.hat-price {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+
+    background: #3b1f6f;
+    color: #fff;
+    font-size: 12px;
+
+    height: 28px;          
+    min-width: 80px;       
+    padding: 4px 8px;
+
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    box-sizing: border-box;
+    z-index: 3;
+}
+
+/* ================= Coin Image ================= */
+.color-price img,
+.car-price img,
+.hat-price img {
+    width: 18px;          
+    height: 18px;
+    object-fit: contain;
+}
+/* ================= Color Tick ================= */
+.color-tick {
+    position: absolute;
+    top: 40px;     
+    right: -20px;
+    background: none;   
+    color: green;
+    padding: 6px 8px;
+    font-size: 56px;
+    border: none;
+    z-index: 4;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+
+/* ================= Cars & Hats Section ================= */
+
+/* ================= Car & Hat Boxes ================= */
+.car-box,
+.hat-box {
+    width: 95px;
+    height: 170px;
+    border-radius: 15px;
+    flex-shrink: 0;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ================= Car & Hat Images ================= */
+.car-box img,
+.hat-box img {
+    width: 90%;
+    height: auto;
+    max-height: 80%;
+    object-fit: contain;   
+    display: block;
+}
+
+/* ================= Selected ================= */
+.selected-badge {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+
+    background: #3b1f6f;
+    color: white;
+    font-size: 10px;
+    font-weight: 300;
+
+    height: 28px;          
+    min-width: 70px;
+
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    z-index: 4;
+}
+
+/* ================= Selected box ================= */
+.hat-box.selected {
+    box-shadow: 0 0 14px rgba(29,185,84,0.8);
+}
+
+
+
+/* ================= Tick ================= */
+.tick {
+    position: absolute;
+    top: 120px;        
+    right: -22px;      
+    color: #00ff00;
+    font-size: 58px;
+    z-index: 10;       
+    pointer-events: none;
+}
+
+/* ================= Premium ================= */
+.premium {
+    box-shadow: 0 0 12px rgba(255,255,255,0.5);
+}
+
+
+
+/* ================= Responsiveness ================= */
+
+/* ================= 481px ------- 768px iPads, Tablets Devices ================= */
+@media (max-width: 768px) {
+  .second-page-background {
+    background-attachment: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: auto;
+  }
+
+  .store {
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    margin: 0;
+  }
+
+  .left {
+    margin-top: 20px;
+  }
+
+  .player-frame {
+    width: 150px;
+    height: 150px;
+    border-width: 12px;
+  }
+
+  .player-circle {
+    width: 110px;
+    height: 110px;
+  }
+
+  .player-name {
+    font-size: 20px;
+  }
+
+  .edit-btn {
+    font-size: 18px;
+    padding: 10px 30px;
+  }
+
+  .players-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .p-tab {
+    font-size: 20px;
+    padding: 10px 18px;
+  }
+
+  .coins-box {
+    position: static;
+    transform: skew(-10deg);
+    margin-top: 15px;
+  }
+
+  .coin {
+    width: 60px;
+  }
+
+  .cat-row {
+    overflow-x: auto;
+    padding-bottom: 30px;
+    gap: 20px;
+  }
+
+
+  .game-tab {
+    transform: none;            
+    padding: 8px 16px;          
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .game-tab img {
+    position: static;
+    transform: none;
+    width: 44px;
+    display: block;
+  }
+
+  .game-tab span {
+    transform: none;
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+
+  .scroll-container {
+    margin-top: 40px;
+  }
+
+  .colors-row,
+  .colors-row-cars,
+  .colors-row-hats {
+    gap: 16px;
+  }
+
+  .box {
+    width: 75px;
+    height: 70px;
+  }
+
+  .car-box,
+  .hat-box {
+    width: 85px;
+    height: 150px;
+  }
+
+  .color-price,
+  .car-price,
+  .hat-price {
+    font-size: 10px;
+    height: 22px;
+    min-width: auto;
+    padding: 0 6px;
+
+    bottom: 4px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .color-price img,
+  .car-price img,
+  .hat-price img {
+    width: 14px;
+    height: 14px;
+  }
+  
+
+  .color-tick {
+    top: 32px;
+    right: -16px;
+
+    font-size: 48px;
+    font-weight: bold;
+    padding: 0;
+  }
+  .tick {
+    top: 104px;
+    right: -16px;
+
+    font-size: 50px;
+    font-weight: bold;
+    padding: 0;
+  }
+
+}
+
+
+/* ================= 320px ----------- 480px Mobile Device ================= */
+@media (max-width: 480px) {
+  .second-page-background {
+    padding: 10px;
+    overflow-y: auto;
+    height: auto;
+  }
+
+  .store {
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .left {
+    margin-top: 10px;
+    margin-right: 0;
+    font-size: 14px;
+  }
+
+  .player-frame {
+    width: 120px;
+    height: 120px;
+    border-width: 10px;
+  }
+
+  .player-circle {
+    width: 90px;
+    height: 90px;
+  }
+
+  .player-name {
+    font-size: 16px;
+    width: 80%;
+    padding: 8px;
+  }
+
+  .edit-btn {
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+
+  .right {
+    margin-top: 20px;
+  }
+
+  .players-row {
+    gap: 12px;
+  }
+
+  .p-tab {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+
+  .coins-box {
+    margin-top: 10px;
+    transform: skew(-10deg);
+  }
+
+  .coin {
+    width: 50px;
+  }
+
+  .cat-row {
+    gap: 12px;
+    padding-bottom: 15px;
+  }
+
+  .game-tab {
+    padding: 6px 10px;
+    gap: 4px;
+    transform: none;
+  }
+
+  .game-tab img {
+    width: 36px;
+  }
+
+  .game-tab span {
+    font-size: 14px;
+  }
+
+  .scroll-container {
+    margin-top: 30px;
+  }
+
+  .colors-row,
+  .colors-row-cars,
+  .colors-row-hats {
+    gap: 10px;
+  }
+
+  .box {
+    width: 60px;
+    height: 55px;
+  }
+
+  .car-box,
+  .hat-box {
+    width: 70px;
+    height: 130px;
+  }
+
+  .color-price,
+  .car-price,
+  .hat-price {
+    font-size: 9px;
+    height: 20px;
+    padding: 0 4px;
+  }
+
+  .color-tick {
+    top: 28px;
+    right: -12px;
+    font-size: 40px;
+  }
+
+  .tick {
+    top: 90px;
+    right: -12px;
+    font-size: 42px;
+  }
+
+  .back-btn {
+    font-size: 32px;
+    top: 12px;
+    left: 12px;
+  }
+}
+
+
+
+/* ================= Tournament Page ================= */
+.tournament {
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+}
+
+/* ================= Title Text ================= */
+.title {
+    margin-top: 190px;
+    color: #4b2a7a;
+    border-radius: 30%;
+    font-size: 46px;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 4px rgba(0,0,0,0.3);
+}
+
+/* ================= Player Buttons Row ================= */
+.players-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 35px;
+}
+
+.players-row input {
+    display: none;
+}
+
+.p-tab {
+    width: 120px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 42px;
+    color: white;
+    border: 6px solid #000;
+    box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.6);
+    transition: 0.15s;
+    cursor: pointer;
+    margin-top: 70px;
+}
+
+
+/* ================= Colors ================= */
+.red { background: #ff3737; }
+.blue { background: #2ab6ff; }
+.green { background: #33d640; }
+.yellow { background: #ffd633; }
+
+/* Red hover */
+.red:hover {
+    background: #e60000;
+}
+
+/* Blue hover */
+.blue:hover {
+    background: #0099e6;
+}
+
+/* Green hover */
+.green:hover {
+    background: #1fbf2f;
+}
+
+/* Yellow hover */
+.yellow:hover {
+    background: #e6c200;
+}
+
+
+/* ================= Responsiveness ================= */
+
+/* ================= 481px ------- 768px iPads, Tablets Devices ================= */
+@media (max-width: 768px) {
+
+   .back-btn {
+    font-size: 40px;
+    top: 30px;
+    left: 20px;
+  }
+
+  .players-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .p-tab {
+    width: 90px;
+    height: 80px;
+    font-size: 28px;
+    margin-top: 20px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+}
+
+/* ================= 320px ----------- 480px Mobile Device ================= */
+@media (max-width: 480px) {
+  .back-btn {
+    font-size: 32px;
+    top: 12px;
+    left: 12px;
+  }
+
+  .players-row {
+    gap: 10px;
+  }
+
+  .p-tab {
+    width: 70px;
+    height: 60px;
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}
