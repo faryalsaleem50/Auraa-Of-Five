@@ -5,14 +5,14 @@ const signupForm = document.getElementById('signup-form');
 
 if (signupForm) {
     signupForm.addEventListener('submit', async (e) => {
-        e.preventDefault(); // Page refresh hone se rokta hai
+        e.preventDefault(); 
 
-        // HTML se values uthana
+   
         const name = document.getElementById('signup-name').value;
         const email = document.getElementById('signup-email').value;
         const password = document.getElementById('signup-password').value;
 
-        // Supabase function call
+       
         const { data, error } = await supabase.auth.signUp({
             email: email,
             password: password,
@@ -27,11 +27,10 @@ if (signupForm) {
             alert("Signup Error: " + error.message);
         } else {
             alert("Account Created Successfully! Now please login.");
-            
-            // UI Switch: Login form dikhane ke liye checkbox ko click kar deta hai
+           
             document.getElementById('form-switch').checked = true;
             
-            // Form khali karne ke liye
+          
             signupForm.reset();
         }
     });
